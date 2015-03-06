@@ -1,0 +1,127 @@
+.image {
+    background-image: url(../images/megan.png); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 112.5px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    /*pointer-events: none !important;*/
+}
+
+#a .image {
+    width: 203px;
+    height: 112px;
+    background-position: -10px -10px;
+}
+
+#b .image {
+    width: 152px;
+    height: 150px;
+    background-position: -10px -142px;
+}
+
+#c .image {
+    width: 204px;
+    height: 149px;
+    background-position: -9px -312px;
+    left: -52px;
+}
+
+#d .image {
+    width: 201px;
+    height: 112px;
+    background-position: -9px -481px;
+    left: -52px;
+}
+
+#e .image {
+    width: 152px;
+    height: 195px;
+    background-position: -10px -612px;
+    top: -43px;
+}
+
+#f .image {
+    width: 203px;
+    height: 117px;
+    background-position: -10px -827px;
+    left: -51px;
+    top: -4px;
+}
+
+#g .image {
+    width: 204px;
+    height: 156px;
+    background-position: -10px -964px;
+    left: -51px;
+    top: -4px;
+}
+
+#h .image {
+    width: 200px;
+    height: 198px;
+    background-position: -11px -1140px;
+    left: -51px;
+    top: -43px;
+}
+
+#i .image {
+    width: 152px;
+    height: 117px;
+    background-position: -10px -1355px;
+    top: -1px;
+}
+
+#j .image {
+    width: 255px;
+    height: 156px;
+    background-position: -10px -1493px;
+    left: -51px;
+    top: -40px;
+}
+
+#k .image {
+    width: 204px;
+    height: 156px;
+    background-position: -10px -1668px;
+    top: -1px;
+}
+
+#l .image {
+    width: 148px;
+    height: 118px;
+    background-position: -10px -1844px;
+    top: -1px;
+    left: 1px;
+}
+
+#m .image {
+    width: 203px;
+    height: 150px;
+    background-position: -10px -1981px;
+    top: -39px;
+}
+
+#n .image {
+    width: 153px;
+    height: 150px;
+    background-position: -9px -2151px;
+    top: -39px;
+    left: -1px;
+}
+
+#o .image {
+    width: 255px;
+    height: 111px;
+    background-position: -11px -2321px;
+    left: -51px;
+}
+
+#p .image {
+    width: 150px;
+    height: 150px;
+    background-position: -10px -2452px;
+    top: -39px;
+}

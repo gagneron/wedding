@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>puzzle</title>
+    <link rel="stylesheet" type="text/css" href="../css/puzzle.css">
+</head>
+<!-- <body oncontextmenu="return false;"> -->
+<body>
+    <div class="bubble">
+        Solve the<br/>
+        puzzle! 
+    </div>
+    <div class="victory">
+        <header></header>
+        <h1>Will you be my bridesmaid?</h1>
+        <form method="post" action="">
+            <label><input type="radio" name="choice" value="yes" required><span>Yes!</span></label>
+            <label><input type="radio" name="choice" value="yesyes" required><span>Yes! Yes! A million times yes!</span></label>
+            <label><input type="radio" name="choice" value="no" required><span>No&nbsp;&nbsp;:(</span></label>
+            <input id="nameField" type="hidden" name="name" value="">
+            <input type="hidden" name="sent" value="sent">
+            <label class="textArea">
+                Leave a comment, if you wish:
+                <textarea name="comment" id="comment"></textarea>
+            </label>
+            <button id="submit" type="submit" name="send" value="send"/>Submit</button>
+        </form>
+    <div  id="success"></div>
+    </div>
+    <div id="congrats">Congratulations!</div>
+    <div id="puzzle">   
+  
+    </div>
+    <table id="grid"></table>       
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/puzzle.js"></script>
+</body>
+</html>
