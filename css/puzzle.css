@@ -26,7 +26,6 @@ div {
     top: 80px;
     width: 195px;
     height: 120px;
-    padding: 0px;
     background: #F8FFFF;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -37,6 +36,7 @@ div {
     font-weight: bold;
     color: #555555;
     padding: 30px;
+    padding-right: 5px;
     padding-top: 24px;
     letter-spacing: 1px;
     line-height: 30px;
@@ -70,6 +70,18 @@ div {
     z-index: 0;
     right: -24px;
     top: 41px;
+}
+
+.bubble.solved {
+    text-decoration: underline;
+    text-decoration: underline;
+    -moz-text-decoration-color: rgb(110, 150, 180) /* Code for Firefox */
+    text-decoration-color: rgb(110, 150, 180);
+    cursor: pointer;
+}
+
+.bubble.solved:before, .bubble.solved:after {
+    display: none;
 }
 
 .victory {
@@ -269,6 +281,10 @@ button[type=submit] {
     padding: 10px;
     padding: 0px;
     margin: 0;
+}
+
+.transition {
+    transition: all 2s;
 }
 
 .image {

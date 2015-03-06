@@ -374,8 +374,13 @@ $('#menu').find('a').click(function (event) {
 function inViewport(el, winHeight) {
     //detects if element is in or above viewport
     var rect = el[0].getBoundingClientRect();
-    return (rect.bottom - 100 <= winHeight);
+    return (rect.bottom-100 <= winHeight);
 }
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // some code..
+ $('html').addClass('mobile');
+} 
 
 </script>
 <script>

@@ -20,6 +20,7 @@ var Position = function(x, y) {
 
 createGrid();
 createPieces();
+allowSolveOption();
 
 function createGrid() {
     var html = "";
@@ -128,6 +129,7 @@ $(document).mouseup(function() {
     if ($('.unit:first').children().length == puzzle.total) {
         if (!victorious) {
            displayForm();
+           storeUser();
         }
     }
 });
@@ -159,9 +161,9 @@ function mousedown(event) {
         return false;
     }
     setTimeout(function() {
-        $('.bubble').css({'opacity':0});
+        $('.bubble.unsolved').css({'opacity':0});
         setTimeout(function() {
-            $('.bubble').remove();
+            $('.bubble.unsolved').remove();
         }, 500);
     }, 500);
     mouseStatus = "dragging";
@@ -322,7 +324,7 @@ $(document).ready(function(){
             });
             $('h1').text('Thank you for submitting your response!');
             setTimeout(function() {
-                window.location.href = "http://lizandrudy.com/#section4";
+                window.location.href = "http://lizandrudy.com/?"+name+"#weddingPartyPanel";
             }, 1000);
         }, 0);
         return false;
@@ -330,7 +332,46 @@ $(document).ready(function(){
 });
 
 //load proper image
+var name;
 (function() {
-    var name = window.location.search.slice(1);
+    name = window.location.search.slice(1);
     $('head').append('<link rel="stylesheet" type="text/css" href="../css/'+name+'.css">');
 })();
+
+function storeUser() {
+    localStorage.user = name;
+    localStorage.solved = true;
+}
+
+function solvePuzzle() {
+    $('.pic').addClass('transition');
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var index = 0;
+    var y = 30;
+    for (var row = 0; row < puzzle.height; row++) {
+        var x = 30;
+        for (var col = 0; col < puzzle.width; col++) {
+            $('#'+alphabet[index]).css({left: x+'px', top: y+'px'});
+            x += 150;
+            index++;
+        }
+        y += 112.5;
+    }
+    setTimeout(function() {
+        $('.pic').removeClass('transition');
+    }, 2000);
+}
+
+function allowSolveOption() {
+    if (localStorage.solved) {
+        $('.bubble')
+            .html('Click for <br/>the solution')
+            .removeClass('unsolved')
+            .addClass('solved')
+            .click(function() {
+                solvePuzzle();
+                $(this).fadeOut(1000);
+            });
+    }
+}
+
