@@ -15,38 +15,53 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#menu">
 
-<a id="menu" href="#" class="btn btn-lg">
-    <i class="fa fa-bars"></i>
+<a id="menuIcon" class="btn btn-lg">
+    <span class="menu-bar top"></span>
+    <span class="menu-bar middle"></span>
+    <span class="menu-bar bottom"></span>
 </a>
+
+<div id="menu">
+    <ul class="nav">
+        <li><a href="#section1">Top</a></li>
+        <li><a href="#section2">When & Where</a></li>
+        <li><a href="#section4">RSVP</a></li>
+        <li><a href="#weddingPartyPanel">Wedding Party</a></li>
+    </ul>
+</div>
+
 <!-- <div class="fixedBg">
 
 </div> -->
 <div id="section1">
 	<div id="innerSection">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12 text-center jumbotron">
-					<h1>&nbsp;&nbsp;Liz &nbsp;<i class="fa fa-heart"></i>&nbsp; Rudy</h1>
-					<h2>WE'RE GETTING MARRIED!</h2>
-				</div>
-			</div>
+		<div class=" jumbotron">
+			<h1>&nbsp;&nbsp;Liz &nbsp;<i class="fa fa-heart"></i>&nbsp; Rudy</h1>
+			<h2>WE'RE GETTING MARRIED!</h2>
 		</div>
 	</div>
-	
 </div>
 <div class="container" id="section2">
-	<h2 class="transitionPosition transitionTop"><span class="animateOpacity">WHEN & WHERE</span></h2>
+	<!-- <h2 class="transitionPosition transitionTop"><span class="animateOpacity">WHEN & WHERE</span></h2> -->
+
+    <div class="header animateOpacity transitionTop transitionPosition">
+        <h2>WHEN & WHERE</h2>
+    </div>
+    <hr class="animateOpacity transitionTop transitionPosition">
+    <span class="heart animateOpacity transitionTop transitionPosition"><i class="fa fa-heart"></i></span>
+
 	<div id="locationBrief" class="animateOpacity transitionPosition transitionTop">
-        <i class="fa fa-heart"></i>
 		We chose the Scripps Seaside Forum as our wedding venue because of it's beautiful location and proximity to the ocean. La Jolla's shores are very near and dear to Liz's heart as she loves the sea and it's where she spent her high school summers surfing. For Rudy, this is the beach where he first got stung by a sting ray.
         
 	</div>
+    <hr class="animateOpacity transitionTop transitionPosition">
 	<div class="row dateLocationRow">
-    	<div class="dateLocationCol col-sm-4 col-sm-offset-2 transitionPosition transitionLeft">
+    	<div class="dateLocationCol col-sm-5 col-sm-offset-1 transitionPosition transitionLeft">
         	<div id="location" class="box animateOpacity">
             	<div class="boxTitle">
             		<i class="fa fa-calendar boxIcon"></i>
@@ -57,14 +72,14 @@
                 </div>
         	</div>
         </div>
-        <div class="dateLocationCol col-sm-4 transitionPosition transitionRight">
+        <div class="dateLocationCol col-sm-5 transitionPosition transitionRight">
         	<div id="date_time" class="box animateOpacity">
             	<div class="boxTitle">
             		<span class="glyphicon glyphicon-map-marker boxIcon"></span>
         			<span class="boxLabel">Location</span>
                 </div>
                 <div class="textBox">
-                	The wedding will take place at <strong>Scripps Seaside Forum</strong> which is located at <strong>8610 Kennel Way, La Jolla, CA 92037</strong>.
+                	The wedding will take place at the <strong>Scripps Seaside Forum</strong>, which is located at <strong>8610 Kennel Way, La Jolla, CA 92037</strong>.
                 </div>
         	</div>
         </div>
@@ -73,22 +88,47 @@
 </div>
 <div id="section3" class="bigBg"></div>
 <div class="container" id="section4">
-	<h2 class="animateOpacity transitionTop transitionPosition">R.S.V.P</h2>
+	<!-- <h2 class="animateOpacity transitionTop transitionPosition">R.S.V.P</h2>
     <hr class="animateOpacity transitionTop transitionPosition">
-    <i class="fa fa-heart animateOpacity transitionTop transitionPosition"></i>
+    <span class="heart animateOpacity transitionTop transitionPosition"><i class="fa fa-heart"></i></span> -->
+
+    <div class="header animateOpacity transitionTop transitionPosition">
+        <h2>R.S.V.P.</h2>
+    </div>
+    <hr class="animateOpacity transitionTop transitionPosition">
+    <span class="heart animateOpacity transitionTop transitionPosition"><i class="fa fa-heart"></i></span>
+
+
 	<div class="row centered animateOpacity transitionTop transitionPosition">
-    	<button class="btn btn-lg">Please R.S.V.P. by October 10th.</button>
+    	<button class="col-xs-8 col-xs-offset-2 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4 btn btn-lg">Please R.S.V.P. by October 10th.</button>
     </div>
     <div id="form" class="row">
-        <div class="col-sm-4 col-sm-offset-2 animateOpacity transitionLeft transitionPosition">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 animateOpacity transitionLeft transitionPosition">
             <label for="name">*Name:</label>
             <input id="name" type="text" required class="form-control">
             <label for="email">*Email:</label>
             <input id="email" type="text" required class="form-control">
-            <label for="email">*Something:</label>
-            <input type="text" class="form-control">
+            <label>*Are you attending?</label><br/>
+            <label class="radio-inline">
+              <input type="radio" name="attendingOption" id="attendingYes" value="yes"> Yes
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="attendingOption" id="attendingYes" value="no"> No
+            </label>
+            
+            <div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option1" autocomplete="off"> Radio 1 (preselected)
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+  </label>
+</div>
         </div>
-        <div class="col-sm-4 animateOpacity transitionRight transitionPosition">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0  col-sm-5 col-lg-4 animateOpacity transitionRight transitionPosition">
             <label for="message">Leave a message:</label>
             <textarea id="message" class="form-control"></textarea>
         </div>
@@ -107,7 +147,7 @@
         <div class="title col-sm-3 col-xs-12 animateOpacity transitionLeft transitionPosition">BRIDESMAIDS</div>
         <div class="partyBoxes col-sm-8 col-xs-12 animateOpacity transitionRight transitionPosition">
             <div class="row">
-                <div class="partyBox col-xs-6 col-sm-4 col-md-2">
+                <div class="partyBox col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-2">
                     <div ng-repeat="icon in socialIcons" class="ng-scope">
                         <section class="partyBoxSection">
                           <div class="button"><a target="_blank" class="btn"><span class="label">image</span></a></div>
@@ -120,7 +160,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="partyBox col-xs-6 col-sm-4 col-md-2">
+                <div class="partyBox col-xs-5 col-sm-4 col-md-2">
                     <div ng-repeat="icon in socialIcons" class="ng-scope">
                         <section class="partyBoxSection">
                           <div class="button"><a target="_blank" class="btn"><span class="label">image</span></a></div>
@@ -133,7 +173,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="partyBox col-xs-6 col-sm-4 col-md-2">
+                <div class="partyBox col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-2">
                     <div ng-repeat="icon in socialIcons" class="ng-scope">
                         <section class="partyBoxSection">
                           <div class="button"><a target="_blank" class="btn"><span class="label">image</span></a></div>
@@ -146,7 +186,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="partyBox col-xs-6 col-sm-4 col-md-2">
+                <div class="partyBox col-xs-5  col-sm-4 col-md-2">
                     <div ng-repeat="icon in socialIcons" class="ng-scope">
                         <section class="partyBoxSection">
                           <div class="button"><a target="_blank" class="btn"><span class="label">image</span></a></div>
@@ -159,7 +199,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="partyBox col-xs-6 col-sm-4 col-md-2">
+                <div class="partyBox col-xs-5 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-2">
                     <div ng-repeat="icon in socialIcons" class="ng-scope">
                         <section class="partyBoxSection">
                           <div class="button"><a target="_blank" class="btn"><span class="label">image</span></a></div>
@@ -172,7 +212,7 @@
                         </section>
                     </div>
                 </div>
-                <div class="partyBox  col-xs-6 col-sm-4 col-md-2">
+                <div class="partyBox  col-xs-5 col-sm-4 col-md-2">
                     <div ng-repeat="icon in socialIcons" class="ng-scope">
                         <section class="partyBoxSection">
                           <div class="button"><a target="_blank" class="btn"><span class="label">image</span></a></div>
@@ -246,7 +286,7 @@ $(window).resize(function() {
 
 $('.animateOpacity').each(function() {
     if (inViewport($(this),winHeight)) {
-        $(this).addClass('animateOpacityOn').animate({opacity: 1}, 200);
+        $(this).addClass('animateOpacityOn').animate({opacity: 1}, 1200);
     }
 });
 
@@ -258,6 +298,17 @@ $('.transitionPosition').each(function() {
         .removeClass('transitionBottom');
     }
 });
+
+$('#menuIcon').click(function() {
+    if ($(this).hasClass('open')) {
+        $(this).removeClass('open');
+        $('#menu').removeClass('open');
+    } else {
+        $(this).addClass('open');
+        $('#menu').addClass('open');
+    }
+});
+
 
 $(window).scroll(function(){
     var winTop = $window.scrollTop();
@@ -285,7 +336,7 @@ $(window).scroll(function(){
 
     $('.animateOpacity').each(function() {
         if (inViewport($(this),winHeight) && !$(this).hasClass('animateOpacityOn')) {
-            $(this).addClass('animateOpacityOn').animate({opacity: 1}, 200);
+            $(this).addClass('animateOpacityOn').animate({opacity: 1}, 1200);
         }
     });
 
@@ -303,6 +354,22 @@ var zindex = 20;
 $('.partyBox').each(function() {
     $(this).css('z-index', zindex--);
 });
+
+$('#menu').find('a').click(function (event) {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+
+
 
 function inViewport(el, winHeight) {
     //detects if element is in or above viewport
@@ -330,6 +397,11 @@ function inViewport(el, winHeight) {
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-	 
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    
+$('body').scrollspy({ target: '#menu', offset: 400 });
+
+</script>
 </body>
 </html>
